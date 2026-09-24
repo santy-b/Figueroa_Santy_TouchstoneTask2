@@ -1,0 +1,67 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #e67e22;
+  --bg-color: #fdfbf7;
+  --text-color: #1a1a1a;
+  
+  --heading-font: 'Roboto', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   2. MOBILE STYLES (DEFAULT / BASE STYLES)
+   Written first without any media queries.
+   These styles apply to mobile screens (small viewports) by default.
+   ========================================================================== */
+
+/* Navigation stacks vertically on mobile */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  list-style: none;
+}
+
+/* Content cards stack in a single column on mobile */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ==========================================================================
+   3. DESKTOP / TABLET OVERRIDES (MEDIA QUERY)
+   Applies ONLY when the screen width is 768px or wider.
+   ========================================================================== */
+@media (min-width: 768px) {
+  
+  /* Navigation switches to a horizontal row */
+  .nav-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Cards switch to a multi-column row */
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
