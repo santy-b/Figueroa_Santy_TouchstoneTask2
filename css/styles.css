@@ -19,14 +19,23 @@ body {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
 /* ==========================================================================
-   2. MOBILE STYLES (DEFAULT / BASE STYLES)
-   Written first without any media queries.
-   These styles apply to mobile screens (small viewports) by default.
+   2. MOBILE STYLES
    ========================================================================== */
 
 /* Navigation stacks vertically on mobile */
-.nav-menu {
+nav ul{
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -34,34 +43,39 @@ body {
   list-style: none;
 }
 
-/* Content cards stack in a single column on mobile */
-.card-container {
+.category-grid {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
 }
 
+.category-card {
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
 /* ==========================================================================
-   3. DESKTOP / TABLET OVERRIDES (MEDIA QUERY)
-   Applies ONLY when the screen width is 768px or wider.
+   3. DESKTOP / TABLET STYLES
    ========================================================================== */
 @media (min-width: 768px) {
   
   /* Navigation switches to a horizontal row */
-  .nav-menu {
+  nav ul{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  /* Cards switch to a multi-column row */
-  .card-container {
-    flex-direction: row;
+  .category-grid {
+    flex-direction: row; /* Horizontal layout on wider screens */
     flex-wrap: wrap;
+    justify-content: space-between;
   }
+  
 
-  .card {
+  .category-card {
     flex: 1 1 calc(33.333% - 1rem);
   }
 }
