@@ -15,6 +15,7 @@
           <li><a href="products.html">Products</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><span id="fav-count">Favorites: 0</span></li> <!-- Keeps HTML valid & aligned -->
         </ul>
       </nav>
     </header>
@@ -33,6 +34,7 @@
       <figcaption>
         Our Signature Sourdough Loaf - Baked fresh daily at 5:00 AM.
       </figcaption>
+      <button class="fav-btn" data-id="signature-sourdough">❤️ Favorite</button>
     </figure>
   </section>
 
@@ -49,6 +51,7 @@
           src="Bakery_c/bakery-bread_c.png"
           alt="A variety of freshly baked whole wheat and sourdough bread loaves on display"
         />
+        <button class="fav-btn" data-id="artisan-breads">❤️ Favorite</button>
       </article>
 
       <article class="category-card">
@@ -59,6 +62,7 @@
           src="Bakery_c/bakery-feature-small_c.png"
           alt="A variety of freshly baked whole wheat and sourdough bread loaves on display"
         />
+        <button class="fav-btn" data-id="pastries">❤️ Favorite</button>
       </article>
 
       <article class="category-card">
@@ -73,5 +77,6 @@
     <footer>
       <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
